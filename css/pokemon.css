@@ -1,0 +1,433 @@
+:root {
+  --clr-black: #1c1c1c;
+  --clr-gray: #ececec;
+  --clr-white: #f7f7f7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background: #fc4a1a;
+    background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
+    background: linear-gradient(to right, #f7b733, #fc4a1a); */
+  min-width: 380px;
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  margin: 30px 0;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  max-width: 980px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#header-principal {
+  /* agregue esto */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.detalle {
+  width: 470px;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  justify-items: center; /* Centra horizontalmente los items */
+  align-items: center; /* Centra verticalmente los items */
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.info {
+  width: 470px;
+  padding: 10px;
+}
+.pokemon {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fafafa10;
+  border-radius: 10px;
+}
+
+img {
+  width: 80%;
+  margin: 20px 0;
+}
+
+.title {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.nombre {
+  margin-top: 5px;
+}
+
+.title,
+.nombre,
+span,
+p::first-letter {
+  text-transform: uppercase;
+}
+
+.descript {
+  width: 100%;
+  gap: 25px;
+  text-align: justify;
+  background-color: rgba(255, 255, 255, 0.576);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.descript .title {
+  font-size: xx-large;
+  margin-bottom: 10px;
+}
+
+.types {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.type,
+.experience {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 10px;
+  margin: 5px 0;
+}
+
+.tipo,
+.xp {
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: x-large;
+}
+
+/* .stats {
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    padding: 10px;      cambie de 5px a 10px */
+/* } */
+
+section {
+  padding: 10px;
+  width: 150px;
+  background-color: rgba(128, 128, 128, 0.548);
+  border-radius: 10px;
+  margin: 20px;
+}
+
+span {
+  font-weight: bold;
+}
+
+.peso-altura {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  background: #fafafa10;
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
+  margin: 10px 0;
+  /* box-shadow: 0 0px 25px 0 rgba(0, 0, 0, 0.37); */
+}
+/* .stat {
+    display: flex;
+    font-size: x-large;
+    justify-content: left;
+    font-weight: bold;
+ }  */
+.abilities {
+  border-radius: 10px;
+  padding: 10px; /* cambie de 5px a 10px */
+}
+.abilities,
+.ability {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5px; /* cambie de 3px a 5px */
+}
+
+.ability {
+  justify-content: space-evenly;
+  font-size: x-large;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.habilidad {
+  padding: 5px 10px; /* cambie de 3px a 5px y de 8px a 10px */
+  border-radius: 10px;
+}
+
+.glass {
+  background: #fafafa10;
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.stat-stylee {
+  background: #fafafa10;
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
+}
+
+.contenedor-chart {
+  /* background-color: var(--clr-gray); */
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+#statsChart {
+  margin: 0 auto;
+  padding: 5px;
+  width: 100%;
+  height: auto;
+}
+canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
+.fondo-normal {
+  background: #304352;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #d7d2cc, #304352);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #d7d2cc, #304352);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fondo-fire {
+  background: #fc4a1a;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #f7b733, #fc4a1a);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #f7b733, #fc4a1a);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fondo-water {
+  background: #00b4db;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #0083b0, #00b4db);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #0083b0, #00b4db);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fondo-grass {
+  background: #dce35b;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #45b649, #dce35b);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #45b649, #dce35b);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fondo-electric {
+  background: #cac531;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f3f9a7, #cac531);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f3f9a7, #cac531);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fondo-ice {
+  background: #2980b9;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ffffff, #6dd5fa, #2980b9);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ffffff, #6dd5fa, #2980b9);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fondo-fighting {
+  background: #cb2d3e;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ef473a, #cb2d3e);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ef473a, #cb2d3e);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fondo-poison {
+  background: #ff0099;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #493240, #ff0099);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #493240, #ff0099);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fondo-ground {
+  background: #bdb9b8;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #3dc7ef, #bdb9b8);
+  background: linear-gradient(to left, #3dc7ef, #bdb9b8);
+}
+
+.fondo-flying {
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 119, 255) 50%,
+    rgb(255, 255, 255) 50%
+  );
+}
+
+.fondo-psychic {
+  background-color: #f366b9;
+  color: rgba(255, 255, 255, 0.774);
+}
+
+.fondo-bug {
+  background: #a80077;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #66ff00, #a80077);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #66ff00, #a80077);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fondo-rock {
+  background: #ccccb2;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #757519, #ccccb2);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #757519, #ccccb2);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fondo-ghost {
+  background: #834d9b;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #d04ed6, #834d9b);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #d04ed6, #834d9b);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fondo-dark {
+  background: #1e130c;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #9a8478, #1e130c);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #9a8478, #1e130c);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: rgb(218, 218, 218);
+}
+
+.fondo-dragon {
+  background: #f16e57;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #9a8478, #f16e57);
+  background: linear-gradient(to left, #53a4cf, #f16e57);
+  color: white;
+}
+
+.fondo-steel {
+  background-color: #9eb7b8;
+  color: black;
+}
+
+.fondo-fairy {
+  background: #b24592;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #f15f79, #b24592);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #f15f79, #b24592);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.stellar {
+  background-color: #01230b;
+  color: white;
+}
+
+.unknown {
+  background-color: #01230b;
+  color: white;
+}
+
+/* Assuming you have a container for evolutions with class .evolutions-content */
+.evolutions-content {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Align items to the start of the flex container */
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+  transition: all 0.9s ease;
+}
+
+.evolution img {
+  margin: 0px;
+}
+
+.evolution p {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.title-evolution {
+  margin: 10px 0 5px 0;
+  font-size: 2rem;
+}
+
+.evolution {
+  width: 200px;
+  padding: 20px;
+  margin: 10px;
+  background: none;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.9s ease;
+}
+
+.evolutions {
+  border-radius: 10px;
+  width: 96.5%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 10px 0 10px;
+
+}
+
+@media screen and (max-width: 960px) {
+  /* .evolutions-content {
+    flex-direction: column;
+  } */
+}

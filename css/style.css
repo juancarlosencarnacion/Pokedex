@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Condensed", sans-serif;
+  font-style: normal;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 380px;
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.div-pokemon {
+  width: 320px;
+  height: 360px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(128, 128, 128, 0.4);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.div-pokemon:hover {
+  border: 5px ridge gold;
+  transform: scale(1.1);
+  box-shadow: 0 0 3px 3px rgba(223, 202, 14, 0.377);
+  cursor: pointer;
+}
+
+.div-img-pokemon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0 0 0;
+  width: 100%;
+  /* Ancho al 100% del contenedor padre */
+  height: 200px;
+  /* Altura deseada, ajusta según tu necesidad */
+}
+
+
+.bg-id-pokemon {
+  position: absolute;
+  font-size: 9rem;
+  opacity: 0.1;
+  font-weight: bold;
+}
+
+img {
+  width: 190px;
+  position: relative;
+}
+
+.div-info {
+  margin: 0 auto 20px auto;
+  background-color: #cccccc1d;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  max-width: 600px;
+  /* Ancho máximo deseado, ajusta según tu diseño */
+  height: 120px;
+  /* Altura deseada, ajusta según tu necesidad */
+}
+
+.div-info p {
+  font-size: 20px;
+  text-align: center;
+
+}
+
+.div-info h3 {
+  margin: 7px 0;
+  text-transform: capitalize;
+  font-size: 30px;
+}
+
+.div-tipos {
+  font-size: 20px;
+  display: flex;
+  gap: 5px;
+}
+
+.div-tipos p {
+  width: 70px;
+  text-align: center;
+  padding: 2px;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: initial;
+}
+
+.glass {
+  /* background: #fafafa10;
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem); */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* #pagination {
+  background-color: rgba(128, 128, 128, 0.164);
+  margin: 0 auto 20px auto;
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  width: 300px;
+} */
+
+/* .nav-pagination {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+} */
+
+.pagination-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  gap: 20px
+}
+
+.pagination-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.pagination-list a {
+  color: #3031a2;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* div JC */
+#pagination {
+  background-color: rgba(128, 128, 128, 0.164);
+  margin: 20px auto;
+  height: 50px;
+  width: 280px;
+  border-radius: 25px;
+}
+
+.botones-paginacion {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.botones-paginacion a{
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 115px;
+  font-size: 1.3rem;
+}
+
+.material-symbols-outlined {
+  margin: 0;
+  padding: 0;
+  
+}
+
+.upPage{
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  bottom: 20px;
+  right: 3px;
+}
+
+.normal {
+  background-color: #a4acaf;
+}
+
+.fighting {
+  background-color: #d56723;
+}
+
+.flying {
+  background: linear-gradient(to bottom, #3dc7ef 50%, #bdb9b8 50%);
+}
+
+.poison {
+  background-color: #b97fc9;
+}
+
+.ground {
+  background: linear-gradient(to bottom, #eed535 50%, #ab9842 50%);
+}
+
+.rock {
+  background-color: #a38c21;
+}
+
+.bug {
+  background-color: #729f3f;
+  color: white;
+}
+
+.ghost {
+  background-color: #7b62a3;
+}
+
+.steel {
+  background-color: #9eb7b8;
+}
+
+.fire {
+  background-color: #fd7d24;
+}
+
+.water {
+  background-color: #4592c4;
+  color: white;
+}
+
+.grass {
+  background-color: #9bcc50;
+}
+
+.electric {
+  background-color: #eed535;
+}
+
+.psychic {
+  background-color: #f366b9;
+}
+
+.ice {
+  background-color: #51c4e7;
+}
+
+.dragon {
+  background: linear-gradient(to bottom, #53a4cf 50%, #f16e57 50%);
+  color: white;
+}
+
+.dark {
+  background-color: #707070;
+  color: white;
+}
+
+.fairy {
+  background-color: #fdb9e9;
+}
+
+.stellar {
+  background-color: #01230b;
+  color: white;
+}
+
+.unknown {
+  background-color: #01230b;
+  color: white;
+}
